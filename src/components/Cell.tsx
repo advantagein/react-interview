@@ -1,5 +1,5 @@
 import { Input, Box } from '@chakra-ui/react';
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 
 interface Props {
   value: string;

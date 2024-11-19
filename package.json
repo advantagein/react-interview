@@ -26,6 +26,7 @@
     "eslint-config-next": "^14.2.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-webpack": "^0.13.8",
+    "eslint-plugin-prettier": "^5.2.1",
     "next": "^14.2.4",
     "prettier": "^3.3.2",
     "sass": "^1.77.6",
@@ -46,6 +47,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "pnpm next lint",
-    "prettier": "prettier --write -c src pages"
+    "prettier": "prettier --write -c src pages",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   }
 }

@@ -13,14 +13,14 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@next/next/recommended',
     'plugin:react-hooks/recommended',
-    'prettier',
+    'plugin:prettier/recommended', // Integrate Prettier
   ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['react', '@typescript-eslint', 'import', 'react-hooks'],
+  plugins: ['react', '@typescript-eslint', 'import', 'react-hooks', 'prettier'],
   settings: {
     'import/resolver': {
       webpack: { config: { resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx'] } } },

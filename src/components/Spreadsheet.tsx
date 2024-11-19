@@ -1,6 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import _ from 'lodash';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import Cell from 'components/Cell';
 

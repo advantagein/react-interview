@@ -1,9 +1,14 @@
 import { AppProps } from 'next/app';
-import React from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
+
 import '../styles.scss';
 
 const RunwayApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
+  return (
+    <ChakraProvider>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  );
 };
 
 export default RunwayApp;
