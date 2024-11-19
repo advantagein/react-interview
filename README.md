@@ -18,3 +18,9 @@ borrow selectively from this repo, please feel free to do so.
 ## Installation
 
 You can install dependencies using `yarn install` and run the app using `yarn dev`.
+
+## Deployment
+
+You can see a deployment for the project at https://react-interview-one.vercel.app/
+
+If Vercel is functioning properly, you should be able to see a preview deployment for a merge request when you open it.
