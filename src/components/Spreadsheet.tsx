@@ -19,11 +19,11 @@ const Spreadsheet: React.FC = () => {
       if (selectedCell) {
         const newRow = Math.max(0, Math.min(NUM_ROWS - 1, selectedCell.row + rowDelta));
         const newCol = Math.max(0, Math.min(NUM_COLUMNS - 1, selectedCell.col + colDelta));
-        // @ts-ignore TODO: Address this jotai typing issue
+        // @ts-expect-error TODO: Address this jotai typing issue
         setSelectedCell({ row: newRow, col: newCol });
       }
     },
-    [selectedCell],
+    [selectedCell, setSelectedCell],
   );
 
   // Handle keypress to move selection
@@ -45,6 +45,8 @@ const Spreadsheet: React.FC = () => {
         case 'ArrowRight':
           moveSelection(0, 1);
           event.preventDefault();
+          break;
+        default:
           break;
       }
     },
@@ -72,8 +74,6 @@ const Spreadsheet: React.FC = () => {
           </Box>
         ))}
       </Flex>
-
-      {/* Spreadsheet Rows */}
       {Array.from({ length: NUM_ROWS }).map((_row, rowIdx) => (
         <Flex key={rowIdx}>
           <Box

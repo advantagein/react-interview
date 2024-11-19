@@ -32,7 +32,7 @@ const Cell: React.FC<CellProps> = memo(({ rowIdx, colIdx }) => {
   const [displayValue, setDisplayValue] = useState(value);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // @ts-ignore TODO: Address this typing issue. I installed the latest version of Jotai and I suspect
+  // @ts-expect-error TODO: Address this typing issue. I installed the latest version of Jotai and I suspect
   // there is some type of unexpected typing mismatch. Would take ~30 minutes to investigate.
   const setSelectedCell = useSetAtom(selectedCellAtom);
 
