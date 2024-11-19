@@ -54,6 +54,7 @@ So, I did a few things to improve the performance:
 1. Update styling of cells so that two borders touching don't create the appearance of a 2x border. I opted into keeping the Chakra UI usage from the seed project despite having no experience with it. I would have solved this with raw CSS, using CSS selectors to isolate individual borders.
 1. The Jotai state works as expected, but I am surprised to see a couple of TypeScript typing errors from `useAtom()` usage. This is due to me using the most recent version of Jotai (2.x), but in my current projects where I use it I use version 1.x. I can downgrade to 1.x to get rid of the errors, but the better solution would be to catch up on possible API changes that caused these typing issues. Because the application functions properly, I am more inclined to spend time catching up to Jotai API changes.
 1. Look into if it's possible to not use `useEffect()` in the `Cell` to focus the input when the arrow key changes. I strongly dislike using `useEffect`, but it was my first choice to solve this problem given the time constraints. It might be possible to imperatively find the input you are navigating to and focus it rather than rely on a side-effect. That would require being able to reference a `useRef` for another cell, which might be challenging or not worth it.
+1. Add keystroke handling for <Enter>, which would act like "Arrow down"
 
 ## Deployment
 
